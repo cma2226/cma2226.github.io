@@ -1,0 +1,13 @@
+---
+title: "Academic and Professional Experience"
+output: html_document:
+  toc: true
+  toc_float: true
+---
+
+#### Education
+- Columbia University, Mailman School of Public Health, Biostatistics MS (2022)
+- Bates College, Biochemistry BS (2018) 
+
+#### Work and Research Experience
+- 
