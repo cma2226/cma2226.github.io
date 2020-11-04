@@ -1,9 +1,0 @@
----
-title: "Homework 4"
-author: "Caroline Andy"
-date: "11/3/2020"
-output: 
-  html_document
----
-
-This is my landing page for p8105 Homework 4. 

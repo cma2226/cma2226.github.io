@@ -1,13 +1,43 @@
 ---
 title: "Academic and Professional Experience"
-output: html_document:
-  toc: true
-  toc_float: true
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
-#### Education
-- Columbia University, Mailman School of Public Health, Biostatistics MS (2022)
-- Bates College, Biochemistry BS (2018) 
+### *Education*
+- *Columbia University*, Mailman School of Public Health, Biostatistics MS (2022)
+- *Bates College*, Biochemistry BS (2018) 
 
-#### Work and Research Experience
-- 
+### *Work/Research Experience*
+**_Research Analyst_, Weill Cornell Medicine** - *Health Policy Economics Dept*, New York, NY (Fall 2020 - present)
+
+* Performs statistical analyses in R and SAS for five health policy economics research projects
+* Writes manuscripts for publication
+
+**_Research Assistant_, Weill Cornell Medicine** - *Population Health Sciences Dept*, New York, NY (Summer 2019 - Fall 2020)
+
+* Ran SAS and SQL queries on the INSIGHT Clinical Research Network Data Repository (12 million patient electronic health records across NYC)
+* Performed data analysis
+* Drafted manuscripts and reports
+
+**_Research Assistant,_ Weill Cornell Medicine** - *Leukemia Clinical Trial Research Program*, New York, NY (Spring 2018 - Summer 2019)\
+
+* Managed and analyzed data contributing to leukemia clinical trials research on novel chemotherapeutic agents
+* Oversaw the translational research program, all specimen collection and clinical data management.
+* Publication: [Changes in Gut Microbial Diversity and Correlations with Clinical Outcomes in Patients with Newly Diagnosed Acute Myeloid Leukemia (AML) Receiving Intensive Chemotherapy](https://ashpublications.org/blood/article/134/Supplement_1/1336/427433/Changes-in-Gut-Microbial-Diversity-and)
+
+**_Research Assistant_, Santa Casa Medical Center HIV Collective Health Department**, São Paulo, Brazil	(Spring 2017)
+
+*	Codified ethnographic field interview data, performed preliminary analyses in R to evaluate the efficacy of existing Brazilian HIV/AIDS health policy in reaching LGBT+ populations in rural and urban spaces.
+*	Performed research in association with Fulbright, Brazilian Ministry of Health, the Foundation for AIDS Research, and the University of California San Francisco. 
+
+**_Federal Pathways Intern_, United States Geological Survey**, Pembroke, New Hampshire (Summer 2016, Summer 2017)
+
+*	Performed all analyses, served as the lead author on research evaluating the performance of a series of multivariate logistic regression probability models which predict elevated arsenic exposure via drinking water using mappable environmental variables.
+*	Identified geospatial deviations in model performance, and additional environmental variables which enhance model accuracy. 
+* Publication: [Assessing Models of Arsenic Occurrence in Drinking Water from Bedrock Aquifers in New Hampshire](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1936-704X.2017.03238.x)
+
+
+

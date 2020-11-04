@@ -1,0 +1,71 @@
+---
+title: "Flex Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(p8105.datasets)
+library(tidyverse)
+library(plotly)
+```
+
+
+```{r data}
+data("nyc_airbnb") 
+
+nyc_airbnb_manhat = nyc_airbnb %>%
+  mutate(rating = review_scores_location / 2) %>%
+  select(neighbourhood_group, neighbourhood, price, rating, lat, long, room_type) %>%
+  filter(
+    neighbourhood_group == "Manhattan",
+    price %in% 100:500
+    ) %>%
+  drop_na(rating)
+
+nyc_airbnb = nyc_airbnb %>%
+  mutate(rating = review_scores_location / 2) %>%
+  select(neighbourhood_group, neighbourhood, price, rating, lat, long, room_type) %>%
+  filter(
+    price %in% 100:500,
+    room_type == "Entire home/apt"
+  ) %>%
+  drop_na(rating)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Manhattan Airbnb Ratings 
+
+```{r}
+nyc_airbnb_manhat %>%
+  plot_ly(x = ~lat, y = ~long, color = ~rating, alpha = 0.5, type = "scatter", mode = "markers")
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Manhattan Airbnb Rental Prices by Room Type 
+
+```{r}
+nyc_airbnb %>% 
+  mutate(neighbourhood_group = fct_reorder(neighbourhood_group, price)) %>% 
+  plot_ly(y = ~price, color = ~neighbourhood_group, type = "box", colors = "viridis")
+```
+
+### Number of 5-Star AirBnbs for less than $150/Night by NYC Borough
+
+```{r}
+nyc_airbnb %>% 
+  filter(
+    rating == "5",
+    price < "150") %>%
+  count(neighbourhood_group) %>% 
+  mutate(neighbourhood_group = fct_reorder(neighbourhood_group, n)) %>% 
+  plot_ly(x = ~neighbourhood_group, y = ~n, color = ~neighbourhood_group, type = "bar", colors = "viridis")
+```
+
