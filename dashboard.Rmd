@@ -54,7 +54,7 @@ Column {data-width=350}
 weather_df %>%
   filter(prcp < 60) %>%
   plot_ly(y = ~prcp, color = ~name, type = "box", colors = "viridis") %>%
-  layout(xaxis = list(title = "Location"), yaxis = list(title = "Recorded precipitation (cm)"))
+  layout(title = "Daily Recorded Precipitation by Weather Station", xaxis = list(title = "Location"), yaxis = list(title = "Precipitation (cm)"))
 ```
 
 ### Total Monthly Precipitation in Central Park, NY
@@ -68,6 +68,6 @@ weather_df %>%
   group_by(name, month) %>%
   summarise(total_prcp = sum(prcp)) %>%
   plot_ly(x = ~month, y = ~total_prcp, color = ~month, type = "bar", colors = "viridis") %>%
-  layout(title = "Total Precipitation by Month in Central Park, NY", xaxis = list(title = "Month"), yaxis = list(title = "Total Precipitation (cm)"))
+  layout(title = "Total Precipitation by Month in Central Park, NY", xaxis = list(title = "Month"), yaxis = list(title = "Precipitation (cm)"))
 ```
 
