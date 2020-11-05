@@ -15,57 +15,59 @@ library(plotly)
 
 
 ```{r data}
-data("nyc_airbnb") 
-
-nyc_airbnb_manhat = nyc_airbnb %>%
-  mutate(rating = review_scores_location / 2) %>%
-  select(neighbourhood_group, neighbourhood, price, rating, lat, long, room_type) %>%
-  filter(
-    neighbourhood_group == "Manhattan",
-    price %in% 100:500
-    ) %>%
-  drop_na(rating)
-
-nyc_airbnb = nyc_airbnb %>%
-  mutate(rating = review_scores_location / 2) %>%
-  select(neighbourhood_group, neighbourhood, price, rating, lat, long, room_type) %>%
-  filter(
-    price %in% 100:500,
-    room_type == "Entire home/apt"
-  ) %>%
-  drop_na(rating)
+weather_df = 
+  rnoaa::meteo_pull_monitors(
+    c("USW00094728", "USC00519397", "USS0023B17S"),
+    var = c("PRCP", "TMIN", "TMAX"), 
+    date_min = "2017-01-01",
+    date_max = "2017-12-31") %>%
+  mutate(
+    name = recode(
+      id, 
+      USW00094728 = "Central Park, NY", 
+      USC00519397 = "Waikiki, HA",
+      USS0023B17S = "Waterhole, WA"),
+    tmin = tmin / 10,
+    tmax = tmax / 10) %>%
+  mutate(prcp = prcp/10)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Manhattan Airbnb Ratings 
+### Recorded Temperature Maximums Overtime at Three Weather Station Locations
 
 ```{r}
-nyc_airbnb_manhat %>%
-  plot_ly(x = ~lat, y = ~long, color = ~rating, alpha = 0.5, type = "scatter", mode = "markers")
+weather_df %>%
+  plot_ly(
+    x = ~date, y = ~tmax, type = "scatter", mode = "markers",
+    color = ~name, alpha = 0.5) %>%
+  layout(title = "Maximum Recorded Temperature Overtime by Weather Station Location", xaxis = list(title = "Date"), yaxis = list(title = "Maximum Temperature (C)"))
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Manhattan Airbnb Rental Prices by Room Type 
+### Recorded Precipitation (cm) by Weather Station Location
 
 ```{r}
-nyc_airbnb %>% 
-  mutate(neighbourhood_group = fct_reorder(neighbourhood_group, price)) %>% 
-  plot_ly(y = ~price, color = ~neighbourhood_group, type = "box", colors = "viridis")
+weather_df %>%
+  filter(prcp < 60) %>%
+  plot_ly(y = ~prcp, color = ~name, type = "box", colors = "viridis") %>%
+  layout(xaxis = list(title = "Location"), yaxis = list(title = "Recorded precipitation (cm)"))
 ```
 
-### Number of 5-Star AirBnbs for less than $150/Night by NYC Borough
+### Total Monthly Precipitation in Central Park, NY
 
 ```{r}
-nyc_airbnb %>% 
-  filter(
-    rating == "5",
-    price < "150") %>%
-  count(neighbourhood_group) %>% 
-  mutate(neighbourhood_group = fct_reorder(neighbourhood_group, n)) %>% 
-  plot_ly(x = ~neighbourhood_group, y = ~n, color = ~neighbourhood_group, type = "bar", colors = "viridis")
+weather_df %>%
+  separate(date, into = c("year", "month", "day"), sep = "-") %>%
+  drop_na(prcp) %>%
+  filter(name == "Central Park, NY") %>%
+  mutate(month = recode_factor(month, "01" = "January", "02" = "February", "03" = "March", "04" = "April", "05" = "May", "06" = "June", "07" = "July", "08" = "August", "09" = "September", "10" = "October", "11" = "November", "12" = "December")) %>%
+  group_by(name, month) %>%
+  summarise(total_prcp = sum(prcp)) %>%
+  plot_ly(x = ~month, y = ~total_prcp, color = ~month, type = "bar", colors = "viridis") %>%
+  layout(title = "Total Precipitation by Month in Central Park, NY", xaxis = list(title = "Month"), yaxis = list(title = "Total Precipitation (cm)"))
 ```
 

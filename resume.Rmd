@@ -7,8 +7,15 @@ output:
 ---
 
 ### *Education*
-- *Columbia University*, Mailman School of Public Health, Biostatistics MS (2022)
-- *Bates College*, Biochemistry BS (2018) 
+* *Columbia University*, Mailman School of Public Health, Biostatistics MS (2022)
+* *Bates College*, Biochemistry BS (2018) 
+* *School for International Training*, International Honors Program: Globalization, Culture and Healthcare - Delhi, India; Cape Town, South Africa; and Sao Paulo, Brazil (2017)
+* *Massachusetts Institute of Technology*, EdX Certificate Program: Global Health Informatics to Improve Quality of Care (2017) 
+
+### *Relevant Skills and Honors*
+* Fulbright Research Award Recipient - Sao Paulo, Brazil
+* Programming languages: R, SAS, SQL, STATA, Python
+* Datasets: Medicare, Medicaid, Private Insurance, Clinical EHR, US Census
 
 ### *Work/Research Experience*
 **_Research Analyst_, Weill Cornell Medicine** - *Health Policy Economics Dept*, New York, NY (Fall 2020 - present)
@@ -22,7 +29,7 @@ output:
 * Performed data analysis
 * Drafted manuscripts and reports
 
-**_Research Assistant,_ Weill Cornell Medicine** - *Leukemia Clinical Trial Research Program*, New York, NY (Spring 2018 - Summer 2019)\
+**_Research Technician,_ Weill Cornell Medicine** - *Leukemia Clinical Trial Research Program*, New York, NY (Spring 2018 - Summer 2019)\
 
 * Managed and analyzed data contributing to leukemia clinical trials research on novel chemotherapeutic agents
 * Oversaw the translational research program, all specimen collection and clinical data management.
@@ -38,6 +45,28 @@ output:
 *	Performed all analyses, served as the lead author on research evaluating the performance of a series of multivariate logistic regression probability models which predict elevated arsenic exposure via drinking water using mappable environmental variables.
 *	Identified geospatial deviations in model performance, and additional environmental variables which enhance model accuracy. 
 * Publication: [Assessing Models of Arsenic Occurrence in Drinking Water from Bedrock Aquifers in New Hampshire](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1936-704X.2017.03238.x)
+
+**_Data and Statistics Intern_, Food Research and Action Center**, Washington D.C.	  (Summer 2017)
+
+*	Created web-based data visualization tools (JavaScript, CSS, HTML) depicting rates of federal food assistance program utilization in all 50 states within the US. 
+
+**_Research Assistant,_ Schlax Biochemistry Laboratory Bates College**, Lewiston, Maine    (2015 – 2018)
+
+*	Carried out fluorescence in situ hybridization to visualize changes in mRNA localization patterns of select pathogenic genes in Borrelia burgdorferi, the causative agent of Lyme disease. 
+*	Generated an honors senior thesis and presented results at multiple scientific conferences. 
+
+### Publications and Presentations 
+* **Andy C.M.**, Fahnestock M.F., Lombard M.A., Hayes L., Bryce J.G., Ayotte J.D. Assessing Models of Arsenic Occurrence in Drinking Water from Bedrock Aquifers in New Hampshire. Journal of Contemporary Water Research & Education, 160: 25–41. May 2017.
+* **Andy C.M.**, Fahnestock M.F., Lombard M.A., Hayes L., Bryce J.G., Ayotte J.D. Assessing Models of Arsenic Occurrence 
+in Drinking Water from Bedrock Aquifers in New Hampshire. Dartmouth University New Hampshire Arsenic Consortium Meeting. March 2019.
+* Wu Y., Zhang Y., **Andy C.**, Orlander D., Kaushal R. Developing and Validating a Clinically Actionable Predictive Model for High-Cost Medicare Patients. Podium Presentation at AcademyHealth Annual Research Meeting. June 13-16, 2020.   
+* Wu Y., Zhang Y., **Andy C.**, Orlander D., Kaushal R. Developing and Validating a Clinically Actionable Predictive Model for High-Cost Medicare Patients. Accepted to AcademyHealth on March 16, 2020.  
+* Lee S., Ritchie E.K., Miah S., **Andy C.**, Curcio T., Goudy G., Hovan M., Douglass C., Desai P., Samuel M.S., Roboz G.J., Satlin M. Changes in Gut Microbial Diversity and Correlations with Clinical Outcomes in Patients with Newly Diagnosed Acute Myeloid Leukemia (AML) Receiving Intensive Chemotherapy. American Society of Hematology Conference. December 2019.
+* Lee S., Ritchie E.K., Miah S., **Andy C.**, Curcio T., Goudy G., Hovan M., Douglass C., Desai P., Samuel M.S., Roboz G.J., Satlin M. Changes in Gut Microbial Diversity and Correlations with Clinical Outcomes in Patients with Newly Diagnosed Acute Myeloid Leukemia (AML) Receiving Intensive Chemotherapy. Blood Journal. November 2019.  
+* **Andy, C.**, Disler, E., Wood, K. The Imaging of RNA Localization in E. coli and B. burgdorferi Cells. 45th Annual Maine 
+Biological and Medical Sciences Symposium, MDI Biological Laboratory. April 2018. 
+* **Andy, C.**, Schlax, P., Koviach-Cote K. Fluorescent Spatial Probing of B. burgdorferi Transcriptome Organization. Mount David Annual Summit, Bates College. April 2018. 
+
 
 
 
